@@ -1,0 +1,26 @@
+# User-provided books and generated personal materials
+*.epub
+*.pdf
+*.zip
+/books/
+/private/
+/learning-data/
+/generated/
+/学习资料/
+/验证/
+/分享包/
+/对话归档/
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+# Runtime artifacts
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.DS_Store
+Thumbs.db
