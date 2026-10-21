@@ -1,0 +1,129 @@
+{
+  "version": "synthetic-demo-0.1",
+  "source": {
+    "title": "把大任务变成可执行的一步",
+    "file": "original-mini-guide.md",
+    "file_sha256": "a36067d92c8e4f46674a308dcf773af054abe6f8a619bbf41f2fd13d0441e657",
+    "provenance": "项目原创模拟材料"
+  },
+  "scope": {
+    "delivery": "一篇模拟短文",
+    "not_a_published_book": true
+  },
+  "nodes": [
+    {
+      "id": "EX-M01",
+      "claim": "说明本轮可观察的结果与范围",
+      "kind": "方法",
+      "provenance": "模拟原文明确",
+      "refs": [
+        {
+          "anchor": "p02",
+          "location": "original-mini-guide.md",
+          "role": "direct",
+          "supports": "以具体结果限定本轮任务"
+        }
+      ],
+      "exercise": {
+        "status": "未设计",
+        "target": null
+      }
+    },
+    {
+      "id": "EX-M02",
+      "claim": "选择直接产生结果的动作",
+      "kind": "方法",
+      "provenance": "模拟原文明确",
+      "refs": [
+        {
+          "anchor": "p03",
+          "location": "original-mini-guide.md",
+          "role": "direct",
+          "supports": "根据结果安排动作"
+        }
+      ],
+      "exercise": {
+        "status": "未设计",
+        "target": null
+      }
+    },
+    {
+      "id": "EX-M03",
+      "claim": "根据检查结果调整规则或动作",
+      "kind": "方法",
+      "provenance": "模拟原文明确",
+      "refs": [
+        {
+          "anchor": "p04",
+          "location": "original-mini-guide.md",
+          "role": "direct",
+          "supports": "按预定结果检查并返回调整"
+        },
+        {
+          "anchor": "p05",
+          "location": "original-mini-guide.md",
+          "role": "condition",
+          "supports": "缺专业判断依据时先补依据",
+          "applies_to": "无法可靠判断任务结果的使用情境"
+        }
+      ],
+      "exercise": {
+        "status": "未设计",
+        "target": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "EX-M01",
+      "to": "EX-M02",
+      "type": "动作选择依据",
+      "provenance": "模拟原文明确",
+      "explanation": "先说明结果，再围绕结果安排动作",
+      "refs": [
+        {
+          "anchor": "p03",
+          "location": "original-mini-guide.md",
+          "supports": "围绕结果安排动作"
+        }
+      ]
+    },
+    {
+      "from": "EX-M03",
+      "to": "EX-M02",
+      "type": "反馈调整",
+      "provenance": "模拟原文明确",
+      "explanation": "检查发现问题后返回规则或动作",
+      "refs": [
+        {
+          "anchor": "p04",
+          "location": "original-mini-guide.md",
+          "supports": "按检查发现的问题调整动作"
+        }
+      ]
+    }
+  ],
+  "reverse_coverage": [
+    {
+      "source_item": "p01",
+      "destination": "问题说明"
+    },
+    {
+      "source_item": "p02",
+      "destination": "EX-M01"
+    },
+    {
+      "source_item": "p03",
+      "destination": "EX-M02"
+    },
+    {
+      "source_item": "p04",
+      "destination": "EX-M03与反馈关系"
+    },
+    {
+      "source_item": "p05",
+      "destination": "EX-M03使用边界"
+    }
+  ],
+  "validation": "材料对应和格式演示，不代表语义独立复核或学习效果验证"
+}
